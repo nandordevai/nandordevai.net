@@ -16,8 +16,6 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addShortcode('gallery', async function () {
         try {
-            // TODO: use web components
-            // return `<img-gallery files="${files.join(',')}"></img-gallery>`;
             const files = await readdir(`./src/img/${this.page.fileSlug}`);
             const links = files.map(file => `
                 <a href="/img/${this.page.fileSlug}/${file}">
@@ -25,12 +23,12 @@ export default function (eleventyConfig) {
                 </a>`).join('');
             return `<div class="gallery">${links}<div>`;
         } catch (err) {
-            return
+            return ''
         }
     });
 
     eleventyConfig.addPassthroughCopy('src/img');
-    eleventyConfig.addPassthroughCopy('src/js');
+    eleventyConfig.addPassthroughCopy('src/components');
     eleventyConfig.addPassthroughCopy('src/*.pdf');
     eleventyConfig.addPassthroughCopy('src/CNAME');
     eleventyConfig.addPassthroughCopy('src/index.html');
