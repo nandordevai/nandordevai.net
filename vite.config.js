@@ -1,6 +1,7 @@
 export default {
     build: {
-        outDir: 'docs',
+        assetsDir: 'js',
         emptyOutDir: false,
+        outDir: 'docs',
     },
 }

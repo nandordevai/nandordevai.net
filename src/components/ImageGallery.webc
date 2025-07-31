@@ -1,0 +1,44 @@
+<template id="image-gallery">
+    <style>
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+
+            .image-gallery__thumbnail {
+                width: 200px;
+            }
+        }
+    </style>
+    <div class="image-gallery"></div>
+</template>
+
+<script>
+class ImageGallery extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        const root = this.attachShadow({ mode: 'open' });
+        const template = document.querySelector('#image-gallery');
+        const container = document.importNode(template.content);
+        const files = this.getAttribute('files')?.split(',');
+        if (files) {
+            const url = new URL(document.location);
+            const imageDir = url.pathname.replace('/projects', '');
+            files.forEach(file => {
+                const imagePath = `/img/${imageDir}${file}`;
+                const link = document.createElement('a');
+                link.setAttribute('href', imagePath);
+                const thumbnail = document.createElement('img');
+                thumbnail.setAttribute('src', imagePath);
+                link.appendChild(thumbnail);
+                container.appendChild(link);
+            });
+        }
+        root.appendChild(container);
+    }
+}
+
+customElements.define('image-gallery', ImageGallery);
+</script>
