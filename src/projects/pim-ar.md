@@ -1,8 +1,9 @@
 ---
-draft: true
+draft: false
 tags: project
 title: "„Kötelék” AR app, Petőfi Irodalmi Múzeum"
 layout: page
+date: 2023-10-10
 ---
 
 „Kötelék” AR app, a Petőfi Irodalmi Múzeum Költő lenni, vagy nem lenni című állandó Petőfi-kiállítására

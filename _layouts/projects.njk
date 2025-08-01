@@ -3,7 +3,7 @@
 {% block content %}
     <h1>{{ title }}</h1>
     {{ content | safe }}
-    {%- for project in collections.project -%}
+    {%- for project in collections.project | reverse -%}
         <a
             {% if page.url == project.url %}
                 class="current"

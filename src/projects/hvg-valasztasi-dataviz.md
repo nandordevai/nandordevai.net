@@ -1,8 +1,9 @@
 ---
-draft: true
+draft: false
 tags: project
 title: "HVG 2022-es választási adatvizualizáció"
 layout: page
+date: 2022-04-03
 ---
 
 ![](</img/hvg-valasztasi-dataviz/telex-21sz.jpg>)
