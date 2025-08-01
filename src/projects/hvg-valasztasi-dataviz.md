@@ -1,6 +1,6 @@
 ---
 draft: true
-tags: projects
+tags: project
 title: "HVG 2022-es választási adatvizualizáció"
 layout: page
 ---

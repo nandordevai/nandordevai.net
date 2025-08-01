@@ -1,6 +1,6 @@
 ---
 draft: true
-tags: projects
+tags: project
 title: "TouchOSC interfész Ableton Live-hoz"
 layout: page
 ---

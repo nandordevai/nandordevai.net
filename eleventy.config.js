@@ -51,6 +51,7 @@ export default function (eleventyConfig) {
             input: 'src',
             output: 'docs',
             layouts: '../_layouts',
+            includes: '../_includes',
         },
     };
 }

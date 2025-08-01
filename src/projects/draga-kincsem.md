@@ -1,7 +1,7 @@
 ---
 draft: false
 layout: page
-tags: projects
+tags: project
 title: "„Drága Kincsem” public art projekt"
 ---
 

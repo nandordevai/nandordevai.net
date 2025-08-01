@@ -1,6 +1,6 @@
 ---
 draft: true
-tags: projects
+tags: project
 title: "„Kötelék” AR app, Petőfi Irodalmi Múzeum"
 layout: page
 ---

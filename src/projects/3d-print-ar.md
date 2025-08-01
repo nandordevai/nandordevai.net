@@ -1,6 +1,6 @@
 ---
 draft: true
-tags: projects
+tags: project
 title: 3D-nyomtatott adatszobrok és AR alkalmazás
 layout: page
 ---

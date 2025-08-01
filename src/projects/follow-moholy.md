@@ -1,6 +1,6 @@
 ---
 draft: true
-tags: projects
+tags: project
 title: "„Follow Moholy” 3D térkép és minijátékok"
 layout: page
 ---

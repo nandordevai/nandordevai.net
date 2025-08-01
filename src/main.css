@@ -16,3 +16,14 @@
     padding-block: .5rem;
     text-decoration: none;
 }
+
+nav {
+    display: flex;
+    gap: 1rem;
+
+    .current {
+        color: hsl(0 0% 10%);
+        pointer-events: none;
+        text-decoration: none;
+    }
+}
