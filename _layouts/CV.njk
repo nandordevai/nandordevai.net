@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nándor Dévai – CV</title>
+    <link rel="stylesheet" href="/main.css">
     <style>
+        :root {
+            --content-width: 50rem;
+        }
+
         a, a:visited, a:active {
             color: black;
         }
@@ -20,7 +25,9 @@
         }
 
         footer {
+            margin: auto;
             margin-block-start: 2rem;
+            width: var(--content-width);
         }
 
         h1, h2 {
@@ -53,7 +60,7 @@
 
         main {
             margin: auto;
-            width: 50rem;
+            width: var(--content-width);
         }
 
         p, ul {
@@ -76,5 +83,8 @@
     <main>
         {{ content | safe }}
     </main>
+    <footer>
+        <a class="button" href="/Nandor Devai CV.pdf">Download as PDF</a>
+    </footer>
 </body>
 </html>

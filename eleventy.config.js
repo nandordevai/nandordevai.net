@@ -1,4 +1,5 @@
 import { readdir } from 'node:fs/promises';
+import linkAttributes from 'markdown-it-link-attributes';
 
 export default function (eleventyConfig) {
     eleventyConfig.setTemplateFormats([
@@ -34,6 +35,15 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/index.html');
     eleventyConfig.addPassthroughCopy({ 'src/main.css': 'main.css' });
     eleventyConfig.addGlobalData('layout', 'base');
+
+    const linkAttributesOptions = {
+        attrs: {
+            target: '_blank',
+            rel: 'noreferrer',
+        },
+    };
+
+    eleventyConfig.amendLibrary('md', mdLib => mdLib.use(linkAttributes, linkAttributesOptions));
 
     return {
 	    htmlTemplateEngine: 'njk',
