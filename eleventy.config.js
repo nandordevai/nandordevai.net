@@ -1,4 +1,5 @@
 import { readdir } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import linkAttributes from 'markdown-it-link-attributes';
 
 export default function (eleventyConfig) {
@@ -18,7 +19,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addShortcode('gallery', async function () {
         try {
             const files = await readdir(`./src/img/${this.page.fileSlug}`);
-            const links = files.map(file => `
+            const links = files.filter(file => file !== '.DS_Store').map(file => `
                 <a href="/img/${this.page.fileSlug}/${file}">
                     <img class="thumbnail" src="/img/${this.page.fileSlug}/${file}">
                 </a>`).join('');
@@ -30,11 +31,10 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('src/img');
     eleventyConfig.addPassthroughCopy('src/fonts');
-    eleventyConfig.addPassthroughCopy('src/components');
+    eleventyConfig.addPassthroughCopy('src/css');
     eleventyConfig.addPassthroughCopy('src/*.pdf');
     eleventyConfig.addPassthroughCopy('src/CNAME');
     eleventyConfig.addPassthroughCopy('src/index.html');
-    eleventyConfig.addPassthroughCopy({ 'src/main.css': 'main.css' });
     eleventyConfig.addGlobalData('layout', 'base');
 
     const linkAttributesOptions = {
@@ -50,6 +50,21 @@ export default function (eleventyConfig) {
         if (data.title !== 'CV' && (data.tags?.includes('post') || data.tags?.includes('page'))) {
             return content.replace(/^#/gm, '##');
         }
+    });
+
+    eleventyConfig.addFilter('slugify', function(value) {
+        return value.toLowerCase().replaceAll(' ', '-');
+    });
+
+    eleventyConfig.addCollection('projects', async (collectionsApi) => {
+        return collectionsApi.getFilteredByTag('project').map((project) => {
+            if (existsSync(`./src/img/${project.page.fileSlug}/thumbnail.jpg`)) {
+                project.thumbnail = 'thumbnail.jpg';
+            } else if (existsSync(`./src/img/${project.page.fileSlug}/thumbnail.png`)) {
+                project.thumbnail = 'thumbnail.png';
+            }
+            return project;
+        });
     });
 
     return {

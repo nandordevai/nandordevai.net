@@ -3,11 +3,18 @@
 {% block content %}
     <h1>{{ title }}</h1>
     {{ content | safe }}
-    {%- for project in collections.project | reverse -%}
-        <a
-            {% if page.url == project.url %}
-                class="current"
-            {% endif %}
-            href="{{ project.url }}">{{ project.data.title }}</a><br>
+    <ul class="projects">
+    {%- for project in collections.projects | reverse -%}
+        <li class="project" style="--thumbnail: url(/img/{{ project.data.page.fileSlug }}/{{ project.thumbnail }})">
+            <a
+                {% if page.url == project.url %}
+                    class="current"
+                {% endif %}
+                href="{{ project.url }}"
+            >
+                {{ project.data.title }}
+            </a>
+        </li>
     {%- endfor -%}
+    </ul>
 {% endblock %}

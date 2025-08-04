@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <title>Contact</title>
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/css/base.css">
     
-<style>
-form {
-    display: flex;
-    flex-direction: column;
-
-    label {
-        display: flex;
-        flex-direction: column;
-    }
-}
-</style>
+<link rel="stylesheet" href="/css/page.css">
 
 </head>
 <body>
@@ -33,20 +23,21 @@ form {
         About
     </a><a
         
-        href="/projects/">
-        Projects
-    </a><a
-        
         class="current"
         
         href="/contact/">
         Contact
+    </a><a
+        
+        href="/projects/">
+        Projects
     </a></nav>
 
     </header>
-    <main>
+    <main class="contact">
         
 <h1>Contact</h1>
+<p>If you have any questions about creative technology, data visualizations or working with me, don’t hesitate to reach out.</p>
 
 
 <form id="contact">
@@ -62,7 +53,7 @@ form {
         Message
         <textarea name="message" id="message"></textarea>
     </label>
-    <button type="submit" id="submit">Send</button>
+    <button class="button" type="submit" id="submit">Send</button>
 </form>
 
 <script>

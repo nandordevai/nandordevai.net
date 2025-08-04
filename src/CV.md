@@ -6,8 +6,7 @@ layout: CV
 
 # Nándor<br>Dévai
 
-Creative & design technologist with web & frontend background<br>
-Data visualization and cultural projects
+Creative and design technologist with web and frontend background
 
 ## work<br>experience
 

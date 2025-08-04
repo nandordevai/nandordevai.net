@@ -1,19 +1,5 @@
 {% extends '_layouts/page.njk' %}
 
-{% block head %}
-<style>
-form {
-    display: flex;
-    flex-direction: column;
-
-    label {
-        display: flex;
-        flex-direction: column;
-    }
-}
-</style>
-{% endblock %}
-
 {% block content %}
 <h1>{{ title }}</h1>
 {{ content | safe }}
@@ -31,7 +17,7 @@ form {
         Message
         <textarea name="message" id="message"></textarea>
     </label>
-    <button type="submit" id="submit">Send</button>
+    <button class="button" type="submit" id="submit">Send</button>
 </form>
 
 <script>
