@@ -10,7 +10,7 @@ export default function (eleventyConfig) {
     ]);
 
     eleventyConfig.addPreprocessor('drafts', 'njk,md', (data, _content) => {
-		if (data.draft) {
+		if (data.draft === true) {
 			return false;
 		}
     });
@@ -29,6 +29,7 @@ export default function (eleventyConfig) {
     });
 
     eleventyConfig.addPassthroughCopy('src/img');
+    eleventyConfig.addPassthroughCopy('src/fonts');
     eleventyConfig.addPassthroughCopy('src/components');
     eleventyConfig.addPassthroughCopy('src/*.pdf');
     eleventyConfig.addPassthroughCopy('src/CNAME');
@@ -44,6 +45,12 @@ export default function (eleventyConfig) {
     };
 
     eleventyConfig.amendLibrary('md', mdLib => mdLib.use(linkAttributes, linkAttributesOptions));
+
+    eleventyConfig.addPreprocessor('heading', 'md', (data, content) => {
+        if (data.title !== 'CV' && (data.tags?.includes('post') || data.tags?.includes('page'))) {
+            return content.replace(/^#/gm, '##');
+        }
+    });
 
     return {
 	    htmlTemplateEngine: 'njk',

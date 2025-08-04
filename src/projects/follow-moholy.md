@@ -1,7 +1,6 @@
 ---
-draft: false
 tags: project
-title: "„Follow Moholy” 3D térkép és minijátékok"
+title: "„Follow Moholy” 3D map and minigames"
 layout: page
 date: 2020-08-01
 ---

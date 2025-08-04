@@ -6,8 +6,8 @@ layout: CV
 
 # Nándor<br>Dévai
 
-[mail@nandordevai.net](<mailto:mail@nandordevai.net>)<br>
-[+36 30 451 7115](<tel:+36 30 451 7115>)
+Creative & design technologist with web & frontend background<br>
+Data visualization and cultural projects
 
 ## work<br>experience
 

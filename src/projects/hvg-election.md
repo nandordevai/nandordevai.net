@@ -1,7 +1,6 @@
 ---
-draft: false
 tags: project
-title: "HVG 2022-es választási adatvizualizáció"
+title: "2022 Hungarian parliamentary election data visualization"
 layout: page
 date: 2022-04-03
 ---
