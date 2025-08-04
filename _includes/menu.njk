@@ -1,0 +1,11 @@
+<nav>
+{%- for _page in collections.page -%}
+    <a
+        {% if _page.url == page.url %}
+        class="current"
+        {% endif %}
+        href="{{ _page.url }}">
+        {{ _page.data.title }}
+    </a>
+{%- endfor -%}
+</nav>

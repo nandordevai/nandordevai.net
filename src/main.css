@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Jura;
+    src: url(./fonts/Jura-VariableFont_wght.ttf);
+}
+
+:root {
+    --bg-color-dark: hsl(200 40% 90%);
+    --bg-color-light: hsl(200 40% 95%);
+    --text-color: hsl(0 0% 10%);
+    --text-bg-color: hsl(0 0% 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+nav {
+    font-family: Jura, sans-serif;
+}
+
+h1,
+h2 {
+    --start: 70%;
+    --stop: 75%;
+    background-image: linear-gradient(
+        var(--text-bg-color) var(--start),
+        var(--bg-color-dark) var(--start) var(--stop),
+        var(--text-bg-color) var(--stop) 100%
+    );
+    font-weight: 300;
+    padding-block-end: 0;
+    padding-inline-end: 2rem;
+    width: fit-content;
+}
+
+nav {
+    padding: 1rem;
+
+    a, a:visited {
+        color: hsl(0 0% 10%);
+    }
+}
+
+main {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-inline: auto;
+    margin-block-end: 8rem;
+    margin-block-start: 4rem;
+    max-width: 50rem;
+}
+
+strong {
+    --start: 10%;
+    --stop: 90%;
+    background-image: linear-gradient(
+        hsl(0 0% 100%) var(--start),
+        var(--bg-color-dark) var(--start) var(--stop),
+        hsl(0 0% 100%) var(--stop) 100%
+    );
+    font-weight: 300;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    .thumbnail {
+        display: list-item;
+        width: 200px;
+    }
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+
+    .current {
+        color: hsl(0 0% 10%);
+        pointer-events: none;
+        text-decoration: none;
+    }
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        background-color: var(--bg-color-light);
+        border: 1px solid var(--bg-color-dark);
+        padding: 1rem;
+        width: calc(50% - 0.5rem);
+    }
+}

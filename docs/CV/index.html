@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nándor Dévai – CV</title>
+    <link rel="stylesheet" href="/common.css">
     <style>
+        :root {
+            --content-width: 50rem;
+        }
+
         a, a:visited, a:active {
             color: black;
         }
@@ -20,7 +25,9 @@
         }
 
         footer {
+            margin: auto;
             margin-block-start: 2rem;
+            width: var(--content-width);
         }
 
         h1, h2 {
@@ -53,7 +60,7 @@
 
         main {
             margin: auto;
-            width: 50rem;
+            width: var(--content-width);
         }
 
         p, ul {
@@ -75,13 +82,13 @@
 <body>
     <main>
         <h1>Nándor<br>Dévai</h1>
-<p><a href="mailto:mail@nandordevai.net">mail@nandordevai.net</a><br>
-<a href="tel:+36%2030%20451%207115">+36 30 451 7115</a></p>
+<p>Creative &amp; design technologist with web &amp; frontend background<br>
+Data visualization and cultural projects</p>
 <h2>work<br>experience</h2>
 <h3>frontend developer – Vizzu</h3>
-<p>Aug 2023 – Present</p>
+<p>Aug 2023 – July 2025</p>
 <ul>
-<li>data visualization app development</li>
+<li><a href="https://vizzu.io" target="_blank" rel="noreferrer">Vizzu.io</a> – data visualization app development</li>
 </ul>
 <h3>creative developer (part time) – self employed</h3>
 <p>July 2020 –</p>
@@ -100,7 +107,7 @@
 </ul>
 <p>main projects:</p>
 <ul>
-<li>Follow Moholy – interactive campus tour of MOME with minigames</li>
+<li><a href="https://games.mome.hu/follow-moholy/" target="_blank" rel="noreferrer">Follow Moholy</a> – interactive campus tour of MOME with minigames</li>
 <li>Roots VR – exploring visualization of organic structures and interaction possibilities in VR/Unity</li>
 <li>Augmented Botany – WebXR app for investigating the relationship of the physical space, user interaction and the plants</li>
 <li>Web reader app prototype for people with ADHD</li>
@@ -138,17 +145,19 @@
 </ul>
 <h3>main programming &amp; technical skills</h3>
 <ul>
-<li>programming languages: JavaScript, Python, C#</li>
-<li>web development: Vue, Node.js, HTML, CSS/SASS</li>
+<li>creative coding: Unity, p5.js, three.js</li>
 <li>data visualization: D3, Vega/Vega-Lite</li>
-<li>other: Unity, p5.js, three.js</li>
+<li>web development: Vue, Node.js, HTML, CSS/SASS</li>
+<li>programming languages: JavaScript, Python, C#</li>
 </ul>
 <h3>teaching experience</h3>
 <ul>
 <li>MOME Open Data Visualization course 2019–2023: data visualization with Javascript &amp; Python</li>
 </ul>
-<p><a href="/Nandor%20Devai%20CV.pdf">Download as PDF</a></p>
 
     </main>
+    <footer>
+        <a class="button" href="/Nandor Devai CV.pdf">Download as PDF</a>
+    </footer>
 </body>
 </html>

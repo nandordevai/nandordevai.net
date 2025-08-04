@@ -6,16 +6,16 @@ layout: CV
 
 # Nándor<br>Dévai
 
-[mail@nandordevai.net](<mailto:mail@nandordevai.net>)<br>
-[+36 30 451 7115](<tel:+36 30 451 7115>)
+Creative & design technologist with web & frontend background<br>
+Data visualization and cultural projects
 
 ## work<br>experience
 
 ### frontend developer – Vizzu
 
-Aug 2023 – Present
+Aug 2023 – July 2025
 
-- data visualization app development
+- [Vizzu.io](https://vizzu.io) – data visualization app development
 
 ### creative developer (part time) – self employed
 
@@ -36,7 +36,7 @@ July 2020 – May 2023
 
 main projects:
 
-- Follow Moholy – interactive campus tour of MOME with minigames
+- [Follow Moholy](https://games.mome.hu/follow-moholy/) – interactive campus tour of MOME with minigames
 - Roots VR – exploring visualization of organic structures and interaction possibilities in VR/Unity
 - Augmented Botany – WebXR app for investigating the relationship of the physical space, user interaction and the plants
 - Web reader app prototype for people with ADHD
@@ -88,13 +88,11 @@ July 2017 – Nov 2017
 
 ### main programming & technical skills
 
-- programming languages: JavaScript, Python, C#
-- web development: Vue, Node.js, HTML, CSS/SASS
+- creative coding: Unity, p5.js, three.js
 - data visualization: D3, Vega/Vega-Lite
-- other: Unity, p5.js, three.js
+- web development: Vue, Node.js, HTML, CSS/SASS
+- programming languages: JavaScript, Python, C#
 
 ### teaching experience
 
 - MOME Open Data Visualization course 2019–2023: data visualization with Javascript & Python
-
-[Download as PDF](</Nandor Devai CV.pdf>)
