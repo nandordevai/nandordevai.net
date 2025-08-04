@@ -2,6 +2,7 @@
 title: CV
 tags: page
 layout: CV
+position: 4
 ---
 
 # Nándor<br>Dévai

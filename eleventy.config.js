@@ -35,6 +35,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/*.pdf');
     eleventyConfig.addPassthroughCopy('src/CNAME');
     eleventyConfig.addPassthroughCopy('src/index.html');
+    eleventyConfig.addPassthroughCopy('src/p5.min.js');
     eleventyConfig.addGlobalData('layout', 'base');
 
     const linkAttributesOptions = {
@@ -66,6 +67,15 @@ export default function (eleventyConfig) {
             return project;
         });
     });
+
+    eleventyConfig.addCollection('pages', async (collectionsApi) => {
+        return collectionsApi.getAll().filter((item) => {
+            return item.data.tags.includes('page');
+        }).sort((a, b) => {
+            console.log(a.data.position, b.data.position)
+            return a.data.position - b.data.position;
+        });
+    })
 
     return {
 	    htmlTemplateEngine: 'njk',

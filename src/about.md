@@ -2,6 +2,7 @@
 tags: page
 layout: page
 title: About
+position: 1
 ---
 
 Hi, my name is Nandor Devai.<br>
