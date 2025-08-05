@@ -72,7 +72,6 @@ export default function (eleventyConfig) {
         return collectionsApi.getAll().filter((item) => {
             return item.data.tags.includes('page');
         }).sort((a, b) => {
-            console.log(a.data.position, b.data.position)
             return a.data.position - b.data.position;
         });
     })
