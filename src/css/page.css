@@ -181,7 +181,8 @@ ul {
 }
 
 .about,
-.project {
+.project,
+.projects {
     p:first-of-type {
         font-size: 1.25rem;
         max-width: 40rem;
