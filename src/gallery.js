@@ -1,7 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    if (!document.querySelector('main').classList.contains('project')) {
-        return;
-    }
+if (document.querySelector('main').classList.contains('project')) {
     const container = document.querySelector('.gallery');
     const viewer = document.createElement('div');
     viewer.classList.add('gallery-viewer');
@@ -22,4 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
             viewerImg.src = event.target.src;
         });
     });
-});
+}

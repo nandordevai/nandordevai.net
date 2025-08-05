@@ -72,10 +72,30 @@ h2 {
 }
 
 nav {
+    display: flex;
+    font-size: 1.25rem;
+    gap: 1rem;
     padding: 1rem;
 
-    a, a:visited {
+    .current {
         color: hsl(0 0% 10%);
+        pointer-events: none;
+        text-decoration: none;
+    }
+
+    a,
+    a:visited {
+        color: hsl(0 0% 10%);
+    }
+
+    a {
+        padding-inline: 1rem;
+        padding-block: 0.25rem;
+        transition: all 0.4s;
+
+        &:hover {
+            background-color: var(--bg-color-light);
+        }
     }
 }
 
@@ -141,18 +161,6 @@ strong {
         box-shadow: 0 0 5px 2px var(--bg-color-dark);
         max-height: 90%;
         max-width: 90%;
-    }
-}
-
-nav {
-    display: flex;
-    font-size: 1.25rem;
-    gap: 2rem;
-
-    .current {
-        color: hsl(0 0% 10%);
-        pointer-events: none;
-        text-decoration: none;
     }
 }
 
