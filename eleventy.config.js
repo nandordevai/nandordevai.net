@@ -35,7 +35,6 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/*.pdf');
     eleventyConfig.addPassthroughCopy('src/CNAME');
     eleventyConfig.addPassthroughCopy('src/index.html');
-    eleventyConfig.addPassthroughCopy('src/p5.min.js');
     eleventyConfig.addGlobalData('layout', 'base');
 
     const linkAttributesOptions = {
