@@ -109,10 +109,38 @@ strong {
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
 
     .thumbnail {
+        aspect-ratio: 1 / 1;
+        border: 1px solid var(--bg-color-light);
+        border-radius: 3px;
         display: list-item;
+        object-fit: cover;
         width: 200px;
+    }
+}
+
+.gallery-viewer {
+    align-items: center;
+    background-color: color-mix(in hsl, var(--text-bg-color), transparent 50%);
+    display: flex;
+    height: 100dvb;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100dvi;
+    z-index: 5;
+
+    &.hidden {
+        display: none;
+    }
+
+    img {
+        box-shadow: 0 0 5px 2px var(--bg-color-dark);
+        max-height: 90%;
+        max-width: 90%;
     }
 }
 
@@ -152,7 +180,8 @@ ul {
     }
 }
 
-.about {
+.about,
+.project {
     p:first-of-type {
         font-size: 1.25rem;
         max-width: 40rem;
@@ -187,7 +216,8 @@ ul {
         input,
         textarea {
             appearance: none;
-            border: 1px solid var(--text-color);
+            border: 1px solid var(--bg-color-dark);
+            border-radius: 3px;
             font-family: Helvetica, Arial, sans-serif;
             font-weight: 300;
             font-size: 1rem;
@@ -202,16 +232,28 @@ ul {
 
 .projects {
     a {
-        background-color: color-mix(in hsl, var(--bg-color-light), transparent 15%);
         color: var(--text-color);
-        padding: 1rem;
+        height: 100%;;
         position: absolute;
         text-decoration: none;
         transition: background-color 0.4s;
         width: 100%;
 
         &:hover {
-            background-color: color-mix(in hsl, var(--bg-color-dark), transparent 5%);
+            span {
+                background-color: color-mix(in hsl, var(--bg-color-dark), transparent 5%);
+                height: 100%;
+            }
+        }
+
+        span {
+            align-items: center;
+            background-color: color-mix(in hsl, var(--bg-color-light), transparent 15%);
+            display: flex;
+            height: 3rem;
+            padding: 1rem;
+            transition: all 0.4s;
+            width: 100%;
         }
     }
 

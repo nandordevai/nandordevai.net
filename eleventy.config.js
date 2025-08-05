@@ -38,10 +38,13 @@ export default function (eleventyConfig) {
     eleventyConfig.addGlobalData('layout', 'base');
 
     const linkAttributesOptions = {
-        attrs: {
-            target: '_blank',
-            rel: 'noreferrer',
+        matcher(href, _config) {
+            return href.startsWith('https:');
         },
+        attrs: {
+            target: "_blank",
+            rel: "noopener"
+        }
     };
 
     eleventyConfig.amendLibrary('md', mdLib => mdLib.use(linkAttributes, linkAttributesOptions));

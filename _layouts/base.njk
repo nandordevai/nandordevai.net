@@ -16,7 +16,7 @@
         {% block header %}
         {% endblock %}
     </header>
-    <main class="{{ title | slugify }}">
+    <main class="{{ title | slugify }} {% if tags.includes('project') %}project{% endif %}">
         {% block content %}
         {% endblock %}
     </main>
