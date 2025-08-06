@@ -25,15 +25,21 @@ const data = {
                     name: 'Vega',
                 },
                 {
-                    name: 'Observable',
+                    name: 'ZingChart',
                 },
                 {
-                    name: 'Flourish',
+                    name: 'Plotly',
                 },
+                // {
+                //     name: 'Observable',
+                // },
+                // {
+                //     name: 'Flourish',
+                // },
             ],
         },
         {
-            name: 'Sound and music',
+            name: 'Audio',
             children: [
                 {
                     name: 'SuperCollider',
@@ -58,9 +64,9 @@ const data = {
                 {
                     name: 'Prototyping and iteration',
                 },
-                {
-                    name: 'Media art and installations',
-                },
+                // {
+                //     name: 'Media art and installations',
+                // },
                 {
                     name: 'Python',
                 },
@@ -70,9 +76,9 @@ const data = {
                 {
                     name: 'Unity',
                 },
-                {
-                    name: 'Blender',
-                },
+            //     {
+            //         name: 'Blender',
+            //     },
             ],
         },
         {
