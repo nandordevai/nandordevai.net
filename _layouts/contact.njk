@@ -4,13 +4,15 @@
 <h1>{{ title }}</h1>
 {{ content | safe }}
 
+<div id="response"></div>
+
 <form id="contact">
     <label>
         Email
         <input type="email" name="email" id="email">
     </label>
     <label>
-        Subject
+        Subject (optional)
         <input type="text" name="subject" id="subject">
     </label>
     <label>

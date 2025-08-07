@@ -4,14 +4,3 @@
     --text-color: hsl(0 0% 10%);
     --text-bg-color: hsl(0 0% 100%);
 }
-
-.button {
-    background-color: var(--bg-color-dark);
-    border-radius: 0.25rem;
-    color: var(--text-color);
-    font-size: 1rem;
-    padding-inline: 1rem;
-    padding-block: .5rem;
-    text-decoration: none;
-}
-

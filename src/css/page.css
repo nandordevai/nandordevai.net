@@ -12,7 +12,7 @@ body {
 }
 
 footer {
-    border-top: 1px solid var(--bg-color-dark);
+    border-top: 1px solid var(--bg-color-light);
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -206,6 +206,8 @@ ul {
 
 .contact {
     * {
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 300;
         width: 30rem;
 
         @media screen and (max-width: 960px) {
@@ -225,8 +227,14 @@ ul {
         }
 
         button {
-            appearance: none;
-            border: none;
+            align-self: flex-end;
+            background-color: var(--bg-color-light);
+            border: 1px solid var(--bg-color-dark);
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            padding-inline: 1rem;
+            padding-block: .5rem;
+            width: 40%;
         }
 
         input,
@@ -238,11 +246,20 @@ ul {
             font-weight: 300;
             font-size: 1rem;
             padding: 0.25rem;
+
+            &[name=email],
+            &[name=subject] {
+                width: 60%;
+            }
         }
 
         textarea {
             height: 10rem;
         }
+    }
+
+    #response {
+        margin-block-end: 2rem;
     }
 }
 

@@ -11,6 +11,7 @@ async function sendContactForm(form) {
     ['email', 'subject', 'message'].forEach(id => {
         document.querySelector(`#${id}`).value = '';
     });
+    document.querySelector('#response').innerHTML = '<strong>Thanks for reaching out! I will get back to you soon.</strong>';
 }
 
 const form = document.querySelector('#contact');
