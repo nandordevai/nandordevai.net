@@ -134,25 +134,26 @@ const node = svg.append('g')
     .join('g')
     .attr('transform', d => `translate(${d.y},${d.x})`);
 
-const padding = 12;
+const padding = 30;
 const nodeHeight = 30;
+const borderWidth = 2;
 
 node.filter(d => d.children)
     .append('rect')
-    .attr('x', function(d) {
+    .attr('x', d => {
         const label = d.data.name;
-        return -getApproximateTextWidth(label) / 2 - padding / 2;
+        return -getTextWidth(label) / 2 - padding / 2;
     })
-    .attr('y', -16)
-    .attr('width', function(d) {
-        return getApproximateTextWidth(d.data.name) + padding;
+    .attr('y', -(nodeHeight + borderWidth) / 2)
+    .attr('width', d => {
+        return getTextWidth(d.data.name) + padding;
     })
     .attr('height', nodeHeight)
-    .attr('fill', 'hsl(0 0% 100% / 0.8)')
+    .attr('fill', 'color-mix(in hsl, var(--text-bg-color), transparent 20%)')
     .attr('rx', nodeHeight / 2)
     .attr('ry', nodeHeight / 2)
     .attr('stroke', 'var(--bg-color-dark)')
-    .attr('stroke-width', 2);
+    .attr('stroke-width', borderWidth);
 
 node.append('text')
     .attr('x', d => (d.parent && d.children) ? 0 : (d.children ? 18 : 8))
@@ -160,8 +161,11 @@ node.append('text')
     .attr('dominant-baseline', 'middle')
     .text(d => d.data.name);
 
-function getApproximateTextWidth(text) {
-    return text.length * 0.6 * 16;
+function getTextWidth(text) {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    context.font = '16px Helvetica';
+    return context.measureText(text).width;
 }
 
 skills.append(svg.node());
