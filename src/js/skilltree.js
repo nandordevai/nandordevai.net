@@ -30,12 +30,6 @@ const data = {
                 {
                     name: 'Plotly',
                 },
-                // {
-                //     name: 'Observable',
-                // },
-                // {
-                //     name: 'Flourish',
-                // },
             ],
         },
         {
@@ -64,9 +58,6 @@ const data = {
                 {
                     name: 'Prototyping and iteration',
                 },
-                // {
-                //     name: 'Media art and installations',
-                // },
                 {
                     name: 'Python',
                 },
@@ -76,9 +67,6 @@ const data = {
                 {
                     name: 'Unity',
                 },
-            //     {
-            //         name: 'Blender',
-            //     },
             ],
         },
         {

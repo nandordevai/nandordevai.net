@@ -13,9 +13,6 @@ const data = {
                 {
                     name: 'Three.js',
                 },
-                {
-                    name: 'Unity',
-                },
             ],
         },
         {
@@ -33,12 +30,6 @@ const data = {
                 {
                     name: 'Plotly',
                 },
-                // {
-                //     name: 'Observable',
-                // },
-                // {
-                //     name: 'Flourish',
-                // },
             ],
         },
         {
@@ -67,18 +58,15 @@ const data = {
                 {
                     name: 'Prototyping and iteration',
                 },
-                // {
-                //     name: 'Media art and installations',
-                // },
                 {
                     name: 'Python',
                 },
                 {
                     name: 'Node.js',
                 },
-            //     {
-            //         name: 'Blender',
-            //     },
+                {
+                    name: 'Unity',
+                },
             ],
         },
         {
@@ -106,7 +94,6 @@ const data = {
 
 const width = 800;
 const root = d3.hierarchy(data);
-console.log(root.links())
 const dx = 25;
 const dy = width / (root.height + 1.1);
 const tree = d3.tree().nodeSize([dx, dy]);
@@ -130,11 +117,11 @@ const svg = d3.create('svg')
 const link = svg.append('g')
     .attr('fill', 'none')
     .attr('stroke', 'var(--bg-color-dark)')
+    .attr('stroke-width', 3)
     .attr('stroke-linecap', 'round')
     .selectAll()
     .data(root.links())
     .join('path')
-    .attr('stroke-width', d => d.source.depth === 0 ? 9 : 3)
     .attr('d', d3.linkHorizontal()
         .x(d => d.y)
         .y(d => d.x)
@@ -148,15 +135,12 @@ const node = svg.append('g')
     .join('g')
     .attr('transform', d => `translate(${d.y},${d.x})`);
 
-const textAnchor = ['end', 'middle', 'start'];
-
 node.append('text')
-    .attr('x', d => d.depth === 0 ? -10 : d.depth === 1 ? 0 : 5)
-    .attr('text-anchor', d => textAnchor[d.depth])
+    .attr('x', d => d.children ? -5 : 5)
+    .attr('text-anchor', d => d.children ? 'end' : 'start')
     .attr('dominant-baseline', 'middle')
     .text(d => d.data.name)
     .attr('stroke', 'white')
-    .attr('stroke-width', 5)
     .attr('paint-order', 'stroke');
 
 skills.append(svg.node());
