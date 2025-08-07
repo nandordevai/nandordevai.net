@@ -111,17 +111,17 @@ const height = x1 - x0 + dx * 2;
 const svg = d3.create('svg')
     .attr('width', width)
     .attr('height', height)
-    .attr('viewBox', [-dy / 3, x0 - dx, width, height])
+    .attr('viewBox', [(-dy / 3) + 40, x0 - dx, width, height])
     .attr('style', 'max-width: 100%; height: auto; font: 1rem sans-serif; font-weight: 300;');
 
 const link = svg.append('g')
     .attr('fill', 'none')
     .attr('stroke', 'var(--bg-color-dark)')
-    .attr('stroke-width', 3)
     .attr('stroke-linecap', 'round')
     .selectAll()
     .data(root.links())
     .join('path')
+    .attr('stroke-width', d => 9 - d.source.depth * 5)
     .attr('d', d3.linkHorizontal()
         .x(d => d.y)
         .y(d => d.x)
@@ -129,18 +129,39 @@ const link = svg.append('g')
 
 const node = svg.append('g')
     .attr('stroke-linecap', 'round')
-    .attr('stroke-width', 3)
     .selectAll()
     .data(root.descendants())
     .join('g')
     .attr('transform', d => `translate(${d.y},${d.x})`);
 
+node.filter(d => d.children)
+    .append('rect')
+    .attr('x', function(d) {
+        const label = d.data.name;
+        const padding = 12;
+        return -getApproximateTextWidth(label) / 2 - padding / 2;
+    })
+    .attr('y', -16)
+    .attr('width', function(d) {
+        return getApproximateTextWidth(d.data.name) + 12;
+    })
+    .attr('height', 30)
+    .attr('fill', 'hsl(0 0% 100% / 0.8)')
+    .attr('rx', 15)
+    .attr('ry', 15)
+    .attr('stroke', 'var(--bg-color-dark)')
+    .attr('stroke-width', 2);
+
 node.append('text')
-    .attr('x', d => d.children ? -5 : 5)
-    .attr('text-anchor', d => d.children ? 'end' : 'start')
+    .attr('x', d => (d.parent && d.children) ? 0 : (d.children ? 18 : 8))
+    .attr('text-anchor', d => (d.parent && d.children) ? 'middle' : (d.children ? 'end' : 'start'))
     .attr('dominant-baseline', 'middle')
     .text(d => d.data.name)
     .attr('stroke', 'white')
     .attr('paint-order', 'stroke');
+
+function getApproximateTextWidth(text) {
+    return text.length * 0.6 * 16;
+}
 
 skills.append(svg.node());
