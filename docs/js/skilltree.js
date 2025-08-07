@@ -114,7 +114,7 @@ const svg = d3.create('svg')
     .attr('viewBox', [(-dy / 3) + 40, x0 - dx, width, height])
     .attr('style', 'max-width: 100%; height: auto; font: 1rem sans-serif; font-weight: 300;');
 
-const link = svg.append('g')
+const links = svg.append('g')
     .attr('fill', 'none')
     .attr('stroke', 'var(--bg-color-dark)')
     .attr('stroke-linecap', 'round')
@@ -127,7 +127,7 @@ const link = svg.append('g')
         .y(d => d.x)
     );
 
-const node = svg.append('g')
+const nodes = svg.append('g')
     .attr('stroke-linecap', 'round')
     .selectAll()
     .data(root.descendants())
@@ -138,7 +138,7 @@ const padding = 30;
 const nodeHeight = 30;
 const borderWidth = 2;
 
-node.filter(d => d.children)
+nodes.filter(d => d.children)
     .append('rect')
     .attr('x', d => {
         const label = d.data.name;
@@ -155,7 +155,7 @@ node.filter(d => d.children)
     .attr('stroke', 'var(--bg-color-dark)')
     .attr('stroke-width', borderWidth);
 
-node.append('text')
+nodes.append('text')
     .attr('x', d => (d.parent && d.children) ? 0 : (d.children ? 18 : 8))
     .attr('text-anchor', d => (d.parent && d.children) ? 'middle' : (d.children ? 'end' : 'start'))
     .attr('dominant-baseline', 'middle')
