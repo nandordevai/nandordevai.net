@@ -71,6 +71,14 @@ h2 {
     }
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid var(--bg-color-light);
+    display: inline-block;
+    margin: 0;
+    width: 65%;
+}
+
 nav {
     display: flex;
     font-size: 1.25rem;
@@ -137,6 +145,11 @@ strong {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    width: 100%;
+
+    a {
+        display: inline;
+    }
 
     .thumbnail {
         aspect-ratio: 1 / 1;
@@ -144,7 +157,7 @@ strong {
         border-radius: 3px;
         display: list-item;
         object-fit: cover;
-        width: 200px;
+        width: max(min(43dvi, 200px), 135px);
     }
 }
 
@@ -281,6 +294,7 @@ ul {
 
         span {
             align-items: center;
+            backdrop-filter: blur(2px);
             background-color: color-mix(in hsl, var(--bg-color-light), transparent 15%);
             display: flex;
             height: 3rem;

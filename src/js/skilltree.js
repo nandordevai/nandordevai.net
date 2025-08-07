@@ -134,21 +134,23 @@ const node = svg.append('g')
     .join('g')
     .attr('transform', d => `translate(${d.y},${d.x})`);
 
+const padding = 12;
+const nodeHeight = 30;
+
 node.filter(d => d.children)
     .append('rect')
     .attr('x', function(d) {
         const label = d.data.name;
-        const padding = 12;
         return -getApproximateTextWidth(label) / 2 - padding / 2;
     })
     .attr('y', -16)
     .attr('width', function(d) {
-        return getApproximateTextWidth(d.data.name) + 12;
+        return getApproximateTextWidth(d.data.name) + padding;
     })
-    .attr('height', 30)
+    .attr('height', nodeHeight)
     .attr('fill', 'hsl(0 0% 100% / 0.8)')
-    .attr('rx', 15)
-    .attr('ry', 15)
+    .attr('rx', nodeHeight / 2)
+    .attr('ry', nodeHeight / 2)
     .attr('stroke', 'var(--bg-color-dark)')
     .attr('stroke-width', 2);
 
@@ -156,9 +158,7 @@ node.append('text')
     .attr('x', d => (d.parent && d.children) ? 0 : (d.children ? 18 : 8))
     .attr('text-anchor', d => (d.parent && d.children) ? 'middle' : (d.children ? 'end' : 'start'))
     .attr('dominant-baseline', 'middle')
-    .text(d => d.data.name)
-    .attr('stroke', 'white')
-    .attr('paint-order', 'stroke');
+    .text(d => d.data.name);
 
 function getApproximateTextWidth(text) {
     return text.length * 0.6 * 16;
