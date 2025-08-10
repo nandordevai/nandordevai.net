@@ -1,7 +1,11 @@
 const speed = 8;
+let canvasHeight = 150;
 
 function setup() {
-  createCanvas(windowWidth, 150, document.querySelector('#p5canvas'));
+  if (windowWidth <= 960) {
+    canvasHeight = 80;
+  }
+  createCanvas(windowWidth, canvasHeight, document.querySelector('#p5canvas'));
 }
 
 function draw() {
@@ -12,7 +16,7 @@ function draw() {
     for (let x = 0; x < windowWidth; x += 10) {
       const nx = (frameCount / speed + x) * 0.005;
       const ny = (frameCount / speed + x) * 0.0005 + 10 * i;
-      const y = noise(nx, ny) * 150 + 25;
+      const y = noise(nx, ny) * canvasHeight;
       circle(x, y, 1);
     }
   }

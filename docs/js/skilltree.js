@@ -145,20 +145,28 @@ nodes.filter(d => d.children)
         return -getTextWidth(label) / 2 - padding / 2;
     })
     .attr('y', -(nodeHeight + borderWidth) / 2)
-    .attr('width', d => {
-        return getTextWidth(d.data.name) + padding;
-    })
-    .attr('height', nodeHeight)
-    .attr('fill', 'color-mix(in hsl, var(--text-bg-color), transparent 20%)')
+    .attr('width', d => getTextWidth(d.data.name) + padding)
+    .attr('height', d => d.parent ? nodeHeight : nodeHeight * 1)
+    .attr('fill', d => d.parent
+        ? 'color-mix(in hsl, var(--text-bg-color), transparent 20%)'
+        : 'var(--bg-color-light)'
+    )
     .attr('rx', nodeHeight / 2)
     .attr('ry', nodeHeight / 2)
     .attr('stroke', 'var(--bg-color-dark)')
     .attr('stroke-width', borderWidth);
 
 nodes.append('text')
-    .attr('x', d => (d.parent && d.children) ? 0 : (d.children ? 18 : 8))
-    .attr('text-anchor', d => (d.parent && d.children) ? 'middle' : (d.children ? 'end' : 'start'))
+    .attr('x', d => (d.parent && d.children)
+        ? 0
+        : (d.children ? 18 : 8)
+    )
+    .attr('text-anchor', d => (d.parent && d.children)
+        ? 'middle'
+        : (d.children ? 'end' : 'start')
+    )
     .attr('dominant-baseline', 'middle')
+    .attr('stroke-width', d => d.parent ? 0 : 2)
     .text(d => d.data.name);
 
 function getTextWidth(text) {

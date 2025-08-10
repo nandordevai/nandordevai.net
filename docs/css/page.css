@@ -40,14 +40,14 @@ nav {
 }
 
 h1 {
-    --bottom: 12px;
+    --bottom: 8px;
     @media screen and (max-width: 960px) {
         margin-block-start: 1rem;
     }
 }
 
 h2 {
-    --bottom: 9px;
+    --bottom: 5px;
 }
 
 h1,
@@ -131,8 +131,8 @@ main {
 }
 
 strong {
-    --start: 10%;
-    --stop: 90%;
+    --start: 14%;
+    --stop: 96%;
     background-image: linear-gradient(
         hsl(0 0% 100%) var(--start),
         var(--bg-color-light) var(--start) var(--stop),
@@ -327,4 +327,18 @@ ul {
     top: 0;
     width: 100dvi;
     z-index: 0;
+
+    @media screen and (max-width: 960px) {
+        height: 80px;
+    }
+}
+
+#p5canvas,
+.canvas-overlay {
+    position: absolute;
+    top: 40px;
+
+    @media screen and (max-width: 960px) {
+        top: 40px;
+    }
 }
