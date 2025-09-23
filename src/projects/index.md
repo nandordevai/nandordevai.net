@@ -5,4 +5,4 @@ title: Projects
 position: 2
 ---
 
-Here are the most important projects I’ve worked on or contributed to as a creative developer.
+Here are some of the most important of interesting projects I’ve worked on or contributed to as a creative developer.
