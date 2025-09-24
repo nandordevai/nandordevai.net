@@ -21,7 +21,9 @@
 {% block content %}
     <h1>{{ title }}</h1>
     {{ content | safe }}
-    {% gallery %}
+    {% if not tags.includes('hide-gallery') %}
+        {% gallery %}
+    {% endif %}
 {% endblock %}
 
 {% block footer %}
