@@ -5,4 +5,6 @@ layout: contact
 position: 3
 ---
 
-If you have any questions about creative technology, data visualization, or working with me, feel free to get in touch.
+If you’d like to talk creative technology, data visualization, or a possible collaboration, I’d love to hear from you.
+
+You can also schedule a meeting with me through [SimplyMeet](https://app.simplymeet.me/nandordevai).
