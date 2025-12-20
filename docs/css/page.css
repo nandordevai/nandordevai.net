@@ -346,3 +346,7 @@ ul {
 .clips {
     margin-block: 2rem;
 }
+
+[alt=portrait] {
+    width: 400px;
+}
