@@ -349,4 +349,8 @@ ul {
 
 [alt=portrait] {
     width: 400px;
+
+    @media screen and (max-width: 960px) {
+        width: 90dvi;
+    }
 }
