@@ -352,9 +352,22 @@ ul {
 }
 
 [alt=portrait] {
-    width: 400px;
+    width: 300px;
 
     @media screen and (max-width: 960px) {
         width: 90dvi;
+    }
+}
+
+.about-lead {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    @media screen and (max-width: 960px) {
+        display: block;
+    }
+    p:first-of-type {
+        margin-block-start: 0;
     }
 }
