@@ -219,8 +219,6 @@ ul {
 
 .contact {
     * {
-        font-family: Helvetica, Arial, sans-serif;
-        font-weight: 300;
         width: 30rem;
 
         @media screen and (max-width: 960px) {
@@ -228,9 +226,15 @@ ul {
         }
     }
 
+    h1 {
+        width: fit-content;
+    }
+
     form {
         display: flex;
         flex-direction: column;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 300;
         gap: 1rem;
 
         label {
