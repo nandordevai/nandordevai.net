@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Nandor Devai – The Zone: Crafting a Narrative with CSS and Sound</title>
+    <link rel="stylesheet" href="/css/base.css">
+    
+<link rel="stylesheet" href="/css/page.css">
+<script src="/js/p5.min.js"></script>
+<script src="/js/sketch.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+    
+    
+
+</head>
+<body>
+    
+    <canvas id="p5canvas"></canvas>
+    <div class="canvas-overlay"></div>
+
+    <header>
+        
+    <nav><a
+        
+        href="/about/">
+        About
+    </a><a
+        
+        href="/projects/">
+        Projects
+    </a><a
+        
+        href="/contact/">
+        Contact
+    </a><a href="/Nandor Devai – Creative Technologist.pdf">CV</a>
+</nav>
+
+
+    </header>
+    <main class="the-zone:-crafting-a-narrative-with-css-and-sound project">
+        
+    <h1>The Zone: Crafting a Narrative with CSS and Sound</h1>
+    <p>There is a unique satisfaction in flipping an analog switch. The mechanical click and tactile feedback are things digital interfaces can’t replicate. Still, I was curious how close I could get using only CSS.</p>
+<img src="/img/the-zone/thumbnail.jpg" class="interstitial">
+<p>The project began as a simple sketch – I designed a button, shared a screenshot on social media, and intended to move on. However, I couldn’t stop thinking about what was missing from that frame: the rest of the dashboard. What kind of machine was this? What was its purpose? Could I build a narrative behind a single toggle? I started jotting down ideas, and about two weeks later, <strong>“The Zone”</strong> was born.</p>
+<h2>The Technical Foundation</h2>
+<p>At its core, this is a tech demo. I wanted to build a complete environment, a “machine” built around the buttons, featuring a CRT display, LED indicators, a weathered metal faceplate, and a typewritten manual. Everything is built with HTML, CSS, and JavaScript, with only a few texture images used for backgrounds.</p>
+<p>I used the <strong>Web Audio API</strong> for the interface and ambient sounds. Using oscillators, filters, sample buffers, and waveshapers, I built a modular interface that allowed me to route sources and modulators like a real analog modular synth.</p>
+<p>The background plate and the CRT noise overlay were drawn using the <strong>Canvas API</strong>. I added layers of random imperfections to the “metal” – scratches, grime, and chipped paint – to give it a sense of history.</p>
+<img src="/img/the-zone/ACST-MON.jpg" class="interstitial">
+<h2>Immersion Through Interaction</h2>
+<p>Movement was key to making it feel alive. The buttons depress physically, the screen flickers, and the LED meter tracks the current “radiation” level, which is synced to both visual and auditory noise. Even the manual pages seems to have a physical weight when you flip through them.</p>
+<h2>Narrative Design</h2>
+<p>Beyond the code, I wanted to explore narrative design: Is it possible to tell a compelling story through an emulated interface?</p>
+<p>I’ll leave that for you to decide, but the terminal logs provide clues about your environment, while the manual offers cryptic context. I’ve hidden several easter eggs within the text and at least one in the UI for the observant operator to find.</p>
+<p>Just remember: <strong>Do not listen to the static for too long.</strong></p>
+<p><a href="https://nandordevai.github.io/the-zone/" target="_blank" rel="noopener">Enter the Zone</a></p>
+<img src="/img/the-zone/Manual.jpg" class="interstitial">
+
+    
+
+    </main>
+    <footer>
+        
+    <a href="https://www.linkedin.com/in/nandordevai/" target="_blank"><img src="/img/linkedin.svg"></a>
+    <a rel="me" href="https://mstdn.plus/@nandordevai" target="_blank"><img src="/img/mastodon.svg"></a>
+    <a href="https://www.instagram.com/nandor.devai/" target="_blank"><img src="/img/instagram.svg"></a>
+    <a href="https://bsky.app/profile/nandordevai.bsky.social" target="_blank"><img src="/img/bluesky.svg"></a>
+
+    </footer>
+</body>

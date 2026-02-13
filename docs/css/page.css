@@ -371,3 +371,9 @@ ul {
         margin-block-start: 0;
     }
 }
+
+.project {
+    .interstitial {
+        max-width: 80%;
+    }
+}

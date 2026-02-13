@@ -66,6 +66,7 @@ export default function (eleventyConfig) {
             } else if (existsSync(`./src/img/${project.page.fileSlug}/thumbnail.png`)) {
                 project.thumbnail = 'thumbnail.png';
             }
+            console.log(project)
             return project;
         });
     });
