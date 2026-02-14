@@ -1,6 +1,6 @@
 ---
 tags: [project, hide-gallery]
-title: "The Zone: Crafting a Narrative with CSS and Sound"
+title: "The Zone: Creating a Narrative in the Browser"
 layout: page
 date: 2026-02-13
 ---
@@ -27,7 +27,7 @@ Movement was key to making it feel alive. The buttons depress physically, the sc
 
 ## Narrative Design
 
-Beyond the code, I wanted to explore narrative design: Is it possible to tell a compelling story through an emulated interface?
+Beyond the code, I wanted to explore narrative design: is it possible to tell a compelling story through an emulated interface?
 
 I’ll leave that for you to decide, but the terminal logs provide clues about your environment, while the manual offers cryptic context. I’ve hidden several easter eggs within the text and at least one in the UI for the observant operator to find.
 
