@@ -184,7 +184,7 @@ strong {
     }
 }
 
-ul {
+ul.projects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -197,8 +197,6 @@ ul {
         background-color: var(--bg-color-light);
         border: 1px solid var(--bg-color-dark);
         border-radius: 3px;
-        padding-block: 0.5rem;
-        padding-inline: 1rem;
         transition: background-color 0.4s;
         width: calc(50% - 0.5rem);
 
@@ -374,7 +372,7 @@ ul {
 
 .project {
     .interstitial {
-        max-width: 80%;
+        max-width: max(40rem, 80%);
 
         @media screen and (max-width: 960px) {
             max-width: 100%;
