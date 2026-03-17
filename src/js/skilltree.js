@@ -13,6 +13,9 @@ const data = {
                 {
                     name: 'Three.js',
                 },
+                {
+                    name: 'Unity',
+                },
             ],
         },
         {
@@ -59,22 +62,22 @@ const data = {
                     name: 'Prototyping and iteration',
                 },
                 {
-                    name: 'Python',
+                    name: 'Narrative design',
                 },
                 {
-                    name: 'Node.js',
+                    name: 'Interdisciplinary collaboration',
                 },
                 {
-                    name: 'Unity',
+                    name: 'Critical analysis',
+                },
+                {
+                    name: 'Multisensory design',
                 },
             ],
         },
         {
             name: 'Web development',
             children: [
-                {
-                    name: 'Front-end development',
-                },
                 {
                     name: 'HTML',
                 },
@@ -86,6 +89,9 @@ const data = {
                 },
                 {
                     name: 'Vue.js',
+                },
+                {
+                    name: 'React',
                 },
             ],
         },

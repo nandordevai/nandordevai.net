@@ -371,7 +371,14 @@ ul.projects {
 }
 
 .project {
+    max-width: 40rem;
+
+    @media screen and (max-width: 960px) {
+        max-width: 100%;
+    }
+
     .interstitial {
+        margin: 0 auto;
         max-width: max(40rem, 80%);
 
         @media screen and (max-width: 960px) {

@@ -34,7 +34,7 @@
         
         href="/contact/">
         Contact
-    </a><a href="/Nandor Devai – Creative Technologist.pdf">CV</a>
+    </a><a href="/Nandor Devai – Design Engineer & Creative Technologist.pdf">CV</a>
 </nav>
 
 
@@ -42,17 +42,17 @@
     <main class="building-a-dynamic-3d-case-designer project">
         
     <h1>Building a Dynamic 3D Case Designer</h1>
-    <p>Displaying a static 3D model on a website is one thing, I’ve done that a few times now. But this time, I wanted to push further. I wanted to build something interactive. My goal was a web app that allows users to resize an instrument case in real-time. Here is how I bridged the gap between <strong>Blender</strong> and the browser.</p>
+    <p>Displaying a static 3D model on a website is one thing, I’ve done that a few times now. But this time, I wanted to push further, I wanted to build something interactive. My goal was a web prototype that allows users to resize an instrument case in real-time. Here is how I bridged the gap between <strong>Blender</strong> and the browser.</p>
 <h1>Shape Keys</h1>
 <p>After a brief search, I landed on Blender Shape Keys. Instead of trying to scale the entire object (which often ruins the proportions of the latches or handle), shape keys allowed me to define specific deformations for length, width, and height.</p>
-<p>To keep the workflow clean, I stored the dimension values as custom properties directly within the Blender model. This turned the <code>.glb</code> file into a self-contained data object, simplifying how the web app reads the model's constraints.</p>
+<p>I stored the dimension values as custom properties directly within the Blender model. This turned the <code>.glb</code> file into a self-contained data object, simplifying how the app reads the model's constraints.</p>
 <img src="/img/case-designer/1.png" class="interstitial">
 <h1>The Tech Stack</h1>
 <p>To bring the model to life on the web, I used:</p>
 <ul>
-<li><strong>Three.js</strong>: The heavy lifter for 3D rendering.</li>
-<li><strong>React Three Fiber (R3F)</strong>: To bridge Three.js with React, making the UI-to-model state management seamless.</li>
-<li><strong>Blender</strong>: For the modeling and shape key exports.</li>
+<li><strong>Three.js</strong> for 3D rendering</li>
+<li><strong>React Three Fiber (R3F)</strong> to bridge Three.js with React</li>
+<li><strong>Blender</strong> for the modeling and shape key exports.</li>
 </ul>
 <h1>Lessons Learned</h1>
 <p>I’ll be the first to admit: I’m a Blender beginner. The modeling here is rudimentary, but this project wasn’t about perfect art, it was about exploring the possibilities of parametric design on the web. I’m already planning a more complex project to put these new skills to the test.</p>
