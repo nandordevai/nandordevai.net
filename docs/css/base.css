@@ -1,6 +1,6 @@
 :root {
-    --bg-color-dark: hsl(225 100% 80%);
-    --bg-color-light: hsl(225 100% 95%);
-    --text-color: hsl(0 0% 10%);
-    --text-bg-color: hsl(0 0% 100%);
+    --bg-color-dark: oklch(0.77 0.11 270);
+    --bg-color-light: oklch(0.95 0.03 270);
+    --text-color: oklch(0.1 0 0);
+    --text-bg-color: oklch(1 0 0);
 }

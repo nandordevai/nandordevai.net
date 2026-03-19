@@ -93,14 +93,14 @@ nav {
     }
 
     .current {
-        color: hsl(0 0% 10%);
+        color: oklch(0.1 0 0);
         pointer-events: none;
         text-decoration: none;
     }
 
     a,
     a:visited {
-        color: hsl(0 0% 10%);
+        color: oklch(0.1 0 0);
     }
 
     a {
@@ -134,9 +134,9 @@ strong {
     --start: 14%;
     --stop: 96%;
     background-image: linear-gradient(
-        hsl(0 0% 100%) var(--start),
+        oklch(1 0 0) var(--start),
         var(--bg-color-light) var(--start) var(--stop),
-        hsl(0 0% 100%) var(--stop) 100%
+        oklch(1 0 0) var(--stop) 100%
     );
     font-weight: 300;
 }
@@ -163,7 +163,7 @@ strong {
 
 .gallery-viewer {
     align-items: center;
-    background-color: color-mix(in hsl, var(--text-bg-color), transparent 50%);
+    background-color: color-mix(in oklch, var(--text-bg-color), transparent 50%);
     display: flex;
     height: 100dvb;
     justify-content: center;
@@ -287,7 +287,7 @@ ul.projects {
 
         &:hover {
             span {
-                background-color: color-mix(in hsl, var(--bg-color-dark), transparent 5%);
+                background-color: color-mix(in oklch, var(--bg-color-dark), transparent 5%);
                 height: 100%;
             }
         }
@@ -295,7 +295,7 @@ ul.projects {
         span {
             align-items: center;
             backdrop-filter: blur(2px);
-            background-color: color-mix(in hsl, var(--bg-color-light), transparent 15%);
+            background-color: color-mix(in oklch, var(--bg-color-light), transparent 15%);
             display: flex;
             height: 3rem;
             padding: 1rem;
