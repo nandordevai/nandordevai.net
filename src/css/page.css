@@ -139,6 +139,7 @@ strong {
         oklch(1 0 0) var(--stop) 100%
     );
     font-weight: 300;
+    white-space: nowrap;
 }
 
 .gallery {
